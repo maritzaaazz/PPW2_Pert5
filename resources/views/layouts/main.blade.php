@@ -2,17 +2,60 @@
 <html>
 <head>
     <title>@yield('title')</title>
+    <style>
+        /* Gaya untuk header */
+        header {
+            background-color: #E46F5B; 
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    
+        /* Gaya untuk navigasi */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+    
+        nav ul li a:hover{
+            background-color: #EFD892;
+        } 
+
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+    
+        nav a {
+            text-decoration: none;
+            color: #E46F5B; 
+        }
+    
+        /* Gaya untuk konten utama */
+        main {
+            padding: 20px;
+        }
+    
+        /* Gaya untuk footer */
+        footer {
+            background-color: #E46F5B; 
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+    
 </head>
 <body>
     <header>
-        <h1>Website Laravel</h1>
+        <h1>Data Buku</h1>
     </header>
 
     <nav>
         <ul>
             <li><a href="/">Beranda</a></li>
-            <li><a href="/tentang">Tentang</a></li>
-            <li><a href="/kontak">Kontak</a></li>
+            <li><a href="/tentang">Buku</a></li>
+            <li><a href="/kontak">Pengurus</a></li>
         </ul>
     </nav>
 
@@ -21,7 +64,7 @@
     </main>
 
     <footer>
-        &copy; {{ date('Y') }} Website Laravel
+        &copy; {{ date('Y') }} perpustakaanbuku.co
     </footer>
 </body>
 </html>

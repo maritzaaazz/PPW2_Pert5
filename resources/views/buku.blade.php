@@ -4,42 +4,49 @@
         border-collapse: collapse;
         width: 100%;
         margin-bottom: 20px;
+        background-color: #EFD892;
     }
 
     th, td {
-        border: 1px solid #ddd;
+        border: 1px solid #E46F5B;
         padding: 8px;
-        text-align: left;
+        text-align: center;
     }
 
     th {
+        background-color: #E46F5B; 
+        color: white;
+    }
+
+    tr:nth-child(even) {
         background-color: #f2f2f2;
     }
 
     /* Gaya untuk tombol Hapus dan Edit */
     button {
-        padding: 5px 10px;
-        background-color: #ff6347; /* Warna merah */
+        padding: 5px 17px;
+        background-color: #E46F5B; 
         color: white;
-        border: none;   
+        border: none;
         cursor: pointer;
+        border-radius: 5px;
     }
 
     button:hover {
-        background-color: #ff6347; /* Warna merah yang sedikit lebih gelap saat dihover */
+        background-color: #B5D2F1; 
     }
 
     /* Gaya untuk link "Tambah Buku" */
     a {
         text-decoration: none;
-        background-color: #4caf50; /* Warna hijau */
+        background-color: #E46F5B; 
         color: white;
-        padding: 10px 15px;
+        padding: 5px 23px;
         border-radius: 5px;
     }
 
     a:hover {
-        background-color: #45a049; /* Warna hijau yang sedikit lebih gelap saat dihover */
+        background-color: #B5D2F1; 
     }
 
     /* Gaya untuk teks "Jumlah data" dan "Total harga" */
@@ -70,13 +77,7 @@
                         @csrf
                         <button onClick="return confirm('Yakin mau dihapus?')">Hapus</button>
                     </form>
-                    {{-- <form action="{{ route('buku.update', $buku->id) }}" method="post">
-                        @csrf --}}
-                        {{-- <div>Judul <input type="text" name="judul" value="{{ $buku->judul }}"></div> --}}
-                        {{-- <button onClick="return confirm('Yakin mau diedit?')">Edit</button> --}}
-                        <button><a href="{{ route('buku.edit', $buku->id) }}">Edit</a></button>
-                    {{-- </form> --}}
-
+                        <a href="{{ route('buku.edit', $buku->id) }}">Edit</a>
                 </td>
             </tr>
         @endforeach
